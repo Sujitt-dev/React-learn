@@ -1,8 +1,16 @@
 import ProfileCard from "./ProfileCard"
+import {useState} from "react"
 
 function App() {
+  const [Count, setCount]=useState(0);
   return(
-   <>
+    <>
+    <div>
+      <h1>{Count}</h1>
+      <button onClick={()=>setCount(Count+1)}>Increment</button>
+      <button onClick={()=>setCount(Count-1)}>Decrement</button>
+      <button onClick={()=>setCount(0)} >Reset</button>
+    </div>
     <ProfileCard  name="sujitt" age={25} role={"Developer"}  skills={["java","python","javascript","react","node js","sql"]}/>
 
     <ProfileCard  name="rahul" age={24} role={"Developer"}  skills={["javascript","react","node js"]}/>
