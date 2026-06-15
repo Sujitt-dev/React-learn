@@ -1,9 +1,10 @@
 import { useState } from "react";
 
-function ProfileCard({name, age, role, imgurl, skills, bio_info}) {
+function ProfileCard({name, age, role, imgurl, skills, bio_info, isAvailable}) {
   const [Bio, setBio]= useState(false);
   return (
     <div>
+      {isAvailable ? <p style={{color:"green"}}>Available</p>: <p style={{color:"red"}}>Not Available</p> }
       <h2>{name}</h2>
       <h2>{age}</h2>
       <h2>{role}</h2>
