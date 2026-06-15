@@ -11,11 +11,11 @@ function App() {
       <button onClick={()=>setCount(Count-1)}>Decrement</button>
       <button onClick={()=>setCount(0)} >Reset</button>
     </div>
-    <ProfileCard  name="sujitt" age={25} role={"Developer"}  skills={["java","python","javascript","react","node js","sql"]}/>
+    <ProfileCard  name="sujitt" age={25} role={"Developer"}  skills={["java","python","javascript","react","node js","sql"]} bio_info={"highly skiled and good problem solver"}/>
 
-    <ProfileCard  name="rahul" age={24} role={"Developer"}  skills={["javascript","react","node js"]}/>
+    <ProfileCard  name="rahul" age={24} role={"Developer"}  skills={["javascript","react","node js"]} bio_info={"good communictor and best in management"}/>
 
-    <ProfileCard  name="sumit" age={25} role={"Developer"}  skills={["javascript","react","node js","AWS"]}/>
+    <ProfileCard  name="sumit" age={25} role={"Developer"}  skills={["javascript","react","node js","AWS"]} bio_info={"extriemly good at cloud "}/>
    
    </>
 
