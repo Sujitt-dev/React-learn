@@ -1,22 +1,18 @@
-import ProfileCard from "./ProfileCard"
+import ProfileCard from "./ProfileCard";
+import TaskForm from "./TaskForm";
+import TaskList from "./TaskList";
 import {useState} from "react"
 
 function App() {
   const [Count, setCount]=useState(0);
+  const [skil, setskil]=useState([]);
   const [Inputs, setInputs]=useState("");
-  const [skil, setskil]=useState([])
+  
   return(
     <>
     <div>
-      <ul>
-        {skil.map((x)=>{
-         return <li key={x}>{x}</li>
-        })}
-      </ul>
-      <input type="text" value={Inputs}
-      onChange={(e)=>setInputs(e.target.value)}
-      placeholder="Enter a skill" />
-      
+      <TaskList skil={skil} />
+      <TaskForm Inputs={Inputs} setInputs={setInputs}/>
       <button onClick={()=>{setskil([...skil,Inputs]),setInputs("")}}>Add Skill</button>
     </div>
 
